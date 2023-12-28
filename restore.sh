@@ -18,10 +18,10 @@ if [ "${S3_BUCKET}" = "**None**" ]; then
   exit 1
 fi
 
-if [ "${MONGODB_DATABASE}" = "**None**" -a "${MONGODB_BACKUP_ALL}" != "true" ]; then
-  echo "You need to set the MONGODB_DATABASE environment variable."
-  exit 1
-fi
+# if [ "${MONGODB_DATABASE}" = "**None**" -a "${MONGODB_BACKUP_ALL}" != "true" ]; then
+#   echo "You need to set the MONGODB_DATABASE environment variable."
+#   exit 1
+# fi
 
 if [ "${MONGODB_HOST}" = "**None**" ]; then
   if [ -n "${MONGODB_PORT_27017_TCP_ADDR}" ]; then
